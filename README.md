@@ -1,7 +1,8 @@
 # Cloud
 Projet node.js/react.js  Dockerisé
 
-Ce projet est une application web qui permet à des utilisateurs de se créer un compte, se connecter et discuter en temps réel dans un salon de discussion. L'application est entièrement conteneurisée avec Docker et comprend plusieurs services indépendants.
+Ce projet est une application web qui permet à des utilisateurs de se créer un compte, se connecter et discuter en temps réel dans un salon de discussion. L'application est entièrement conteneurisée avec Docker et comprend plusieurs services indépendants.Vous retrouverez dans le dossier Appli_Explication , un diagram illustrant le projet et des screenshot de l'appli.
+
 Architecture de l'application
 
 L'application est composée des services suivants :
@@ -10,7 +11,6 @@ L'application est composée des services suivants :
     Register Service : Gestion des enregistrements des utilisateurs.
     Login Service : Authentification des utilisateurs.
     Base de données (MySQL) : Stockage des informations des utilisateurs et des messages.
-
 Prérequis:
     Docker et Docker Compose , node , react , javascript 
 
@@ -30,7 +30,7 @@ Vérifiez que tous les conteneurs sont démarrés :
 
 Accédez à l'application : Vous retrouverez dans le dossier Screen les differentes captures d'écran montrant l'utilisation de l'application.
 
-Une fois que vous avez lancer la commande docker-compose attendez que le conteneur de la base de donnée soit actif un log apparaitra dans le terminal : Database is ready. Starting the application. ( terminal.png dans le dossier Screen )
+Une fois que vous avez lancer la commande docker-compose attendez que le conteneur de la base de donnée soit actif un log apparaitra dans le terminal : Database is ready. Starting the application. ( terminal.png dans le dossier Appli_Explication )
 
 Ouvrez votre navigateur et allez à http://localhost:3000.
 
