@@ -13,7 +13,7 @@ function Chat() {
     const [onlineUsers, setOnlineUsers] = useState([]);
     const [privateMessage, setPrivateMessage] = useState('');
     const [selectedUser, setSelectedUser] = useState('');
-    const [status, setStatus] = useState('online');
+    const [status, setStatus] = useState('onligne');
     const [gifs, setGifs] = useState([]);
     const [gifSearch, setGifSearch] = useState('');
     const navigate = useNavigate();
@@ -146,9 +146,8 @@ socket.on('loadMessages', (messages) => {
             <div className="online-users">
                 <h4>Utilisateurs en ligne :</h4>
                 <select onChange={handleStatusChange} value={status}>
-                    <option value="online">En ligne</option>
-                    <option value="busy">Occupé</option>
-                    <option value="offline">Hors ligne</option>
+                    <option value="en ligne">Online</option>
+                    <option value="occupé">Occuped</option>
                 </select>
                 <ul>
                     {onlineUsers.map((user, index) => (

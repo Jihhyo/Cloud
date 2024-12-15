@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Chat en Temps Réel</h1>
+        <h1>My App Chat</h1>
         <Routes>
           {/* Route pour la page de connexion */}
           <Route path="/" element={<Login />} />

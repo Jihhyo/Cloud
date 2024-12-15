@@ -1,24 +1,27 @@
 /* Conteneur principal de la page du chat */
+/*
 .chat-page {
     display: flex;
-    justify-content: center; /* Centre la boîte de chat horizontalement */
-    align-items: flex-start; /* Aligne les éléments en haut */
+    justify-content: center; 
+    align-items: flex-start;
     position: relative;
-    height: 100vh; /* Prend toute la hauteur de la page */
-}
+    height: 100vh; 
+    background-color: #fff4e6; 
+}*/
 
 /* Liste des utilisateurs en ligne */
 .online-users {
     position: fixed; /* Fixe la liste des utilisateurs sur le côté gauche */
     top: 20px;
     left: 20px; /* Colle sur le côté gauche de la page */
-    width: 200px;
-    border: 1px solid #ccc;
+    width: 250px;
+    border: 1px solid #f5b941; /* Bordure orangée */
     border-radius: 10px;
     padding: 10px;
-    background-color: #f5f5f5; /* Changez la couleur de fond */
-    height: calc(100vh - 40px); /*Garde la hauteur de la fenêtre moins le padding */
-    overflow-y: auto; /* Rend la liste défilable si elle est trop longue */
+    background-color: #fff4e6; /* Fond blanc pour plus de contraste */
+    height: calc(100vh - 40px); /* Garde la hauteur de la fenêtre moins le padding */
+    overflow-y: auto; /* Liste défilable si trop longue */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre douce pour ajouter de la profondeur */
 }
 
 /* Chat wrapper pour centrer */
@@ -27,21 +30,22 @@
     justify-content: center;
     align-items: center;
     flex: 1; /* Prend le reste de l'espace disponible */
+    padding-left: 270px; /* Ajoute un espacement à gauche pour la liste des utilisateurs */
 }
 
 /* Boîte de chat */
 .chat-container {
     max-width: 600px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #f5b941; /* Bordure orangée */
     border-radius: 10px;
-    background-color: #f5f5f5; /* Changez la couleur de fond */
+    background-color: #fff4e6; /* Fond blanc pour la boîte de chat */
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; /* Aligne les éléments à gauche */
-    margin: auto; /* Centre la boîte de chat */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
 /* Messages dans la boîte de chat */
@@ -51,9 +55,10 @@
     overflow-y: auto;
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    color: #333;
+    border: 1px solid #f5b941; /* Bordure orangée */
     border-radius: 5px;
-    background-color: #fff; /* Couleur de fond des messages */
+    background-color: #fafafa; /* Couleur de fond douce pour les messages */
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Aligne tous les messages à gauche */
@@ -61,12 +66,12 @@
 
 /* Style des messages individuels */
 .chat-message {
-    margin: 5px 0; /* Ajoute un espacement entre les messages */
+    margin: 5px 0; /* Espacement entre les messages */
     max-width: 80%; /* Limite la largeur des messages */
     padding: 10px;
+    color: #333;
     border-radius: 5px;
-    background-color: #e0e0e0; /* Couleur uniforme pour tous les messages */
-    color: black; /* Couleur de texte */
+    background-color: #f5b941; /* Fond orangé pour les messages */
 }
 
 /* Formulaire d'envoi de messages */
@@ -80,15 +85,27 @@
 input {
     flex: 1;
     margin-right: 10px;
+    padding: 10px;
+    background-color: #fff; /* Fond blanc pour les champs de texte */
+    border: 1px solid #f5b941; /* Bordure orangée */
+    border-radius: 5px;
+    color: #333; /* Texte sombre pour la lisibilité */
+    font-size: 1rem;
 }
 
 /* Bouton d'envoi */
 .btn {
     padding: 10px;
-    background-color: #007bff; /* Couleur du bouton */
+    background-color: #f5b941; /* Orangé doux pour le bouton */
     color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f29c11; /* Orangé légèrement plus foncé au survol */
 }
 
 /* Styles pour les GIFs */
@@ -102,15 +119,44 @@ input {
 .online-users li {
     list-style: none; /* Supprime les puces */
     padding: 5px; /* Ajoute un espacement */
-    border-bottom: 1px solid #ccc; /* Ajoute une ligne de séparation */
+    border-bottom: 1px solid #f5b941; /* Bordure orangée pour la séparation */
+    display: flex;
+    justify-content: space-between; /* Aligne le texte et le bouton */
+    align-items: center;
 }
 
 /* Alignement à gauche pour les utilisateurs en ligne */
 .online-users li {
     text-align: left; /* Aligne le texte à gauche */
-    color: black; /* Uniformise la couleur des utilisateurs en ligne */
+    color: #333; /* Uniformise la couleur des utilisateurs en ligne */
 }
+
+.online-users button {
+    padding: 5px 10px;
+    background-color: #f5b941; /* Bouton d'envoi de message privé */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Format de l'heure des messages */
 .message-time {
     font-size: 10px;  /* Taille de police plus petite pour l'heure */
-    color: rgb(218, 30, 30);      /* Couleur gris pour différencier l'heure */
+    color: rgb(218, 30, 30); /* Couleur gris pour différencier l'heure */
+}
+
+/* Formulaire de recherche de GIFs */
+.gif-search {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Résultats de recherche de GIFs */
+.gif-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
 }

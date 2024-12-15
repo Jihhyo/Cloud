@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Register.css';
+
 
 function Register() {
     const [username, setUsername] = useState('');
@@ -32,11 +34,12 @@ function Register() {
     };
 
     return (
-        <div className="register-container">
-            <h2>Créer un compte</h2>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleRegister}>
+        <div id="register-container">
+            <h2 id="register-title">Créer un compte</h2>
+            {error && <p id="register-error" style={{ color: 'red' }}>{error}</p>}
+            <form id="register-form" onSubmit={handleRegister}>
                 <input
+                    id="register-username"
                     type="text"
                     placeholder="Pseudo"
                     value={username}
@@ -44,6 +47,7 @@ function Register() {
                     className="form-control mb-3"
                 />
                 <input
+                    id="register-password"
                     type="password"
                     placeholder="Mot de passe"
                     value={password}
@@ -51,13 +55,14 @@ function Register() {
                     className="form-control mb-3"
                 />
                 <input
+                    id="register-confirm-password"
                     type="password"
                     placeholder="Confirmez le mot de passe"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     className="form-control mb-3"
                 />
-                <button type="submit" className="btn btn-primary">Créer un compte</button>
+                <button id="register-submit" type="submit" className="btn btn-primary">Créer un compte</button>
             </form>
         </div>
     );

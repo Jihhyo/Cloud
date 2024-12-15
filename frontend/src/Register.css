@@ -1,0 +1,68 @@
+/* Applique uniquement les styles à la page d'inscription */
+#register-container {
+    background-color: #fff4e6; /* Fond très pâle orangé (blanc orangé) */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet subtil */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto; /* Centre horizontalement */
+    margin-top: 150px;
+    box-sizing: border-box; /* Inclut les bordures et padding dans les dimensions */
+}
+
+/* Titre */
+#register-title {
+    margin-bottom: 1.5rem;
+    color: #f5b941; /* Orangé doux */
+}
+
+/* Texte d'erreur */
+#register-error {
+    margin-top: 0.5rem;
+    color: #e74c3c; /* Rouge clair pour les erreurs */
+}
+
+/* Formulaire */
+#register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Champs du formulaire */
+#register-username, 
+#register-password, 
+#register-confirm-password {
+    background-color: #fff; /* Fond blanc pour les champs de texte */
+    border: 1px solid #f5b941; /* Bordure orangée */
+    border-radius: 5px;
+    color: #333; /* Texte sombre pour la lisibilité */
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#register-username:focus, 
+#register-password:focus, 
+#register-confirm-password:focus {
+    border-color: #f5b941; /* Bordure orangée plus marquée lors du focus */
+    outline: none;
+}
+
+/* Bouton */
+#register-submit {
+    background-color: #f5b941; /* Orangé doux pour le bouton */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Texte blanc */
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#register-submit:hover {
+    background-color: #f29c11; /* Orangé un peu plus foncé au survol */
+}

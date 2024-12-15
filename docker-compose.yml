@@ -1,7 +1,7 @@
 version: '3.8'
 
 networks:
-  chatbox-network: # Déclaration du réseau dédié
+  chatbox-network: 
     driver: bridge
 
 services:
@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
     networks:
-      - chatbox-network  # Liaison au réseau
+      - chatbox-network  
     restart: always
 
   frontend:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - backend
     networks:
-      - chatbox-network  # Liaison au réseau
+      - chatbox-network  
 
   register-service:
     build: 
@@ -49,7 +49,7 @@ services:
     depends_on:
       - db
     networks:
-      - chatbox-network  # Liaison au réseau
+      - chatbox-network 
     restart: always
 
   login-service:
@@ -67,7 +67,7 @@ services:
     depends_on:
       - db
     networks:
-      - chatbox-network  # Liaison au réseau
+      - chatbox-network  
     restart: always
 
   db:
@@ -83,5 +83,5 @@ services:
     volumes:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
-      - chatbox-network  # Liaison au réseau
+      - chatbox-network  
     restart: always

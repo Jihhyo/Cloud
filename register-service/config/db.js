@@ -1,8 +1,8 @@
-require('dotenv').config();  // Charger les variables d'environnement
-const mysql = require('mysql2');  // Utilisation de "mysql2" pour les promesses
+require('dotenv').config(); 
+const mysql = require('mysql2');  
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST,  // Utilisation de DB_HOST comme 'db' (nom du service Docker)
+  host: process.env.DB_HOST,  
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
