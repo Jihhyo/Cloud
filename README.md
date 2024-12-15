@@ -38,6 +38,7 @@ Ouvrez votre navigateur et allez à http://localhost:3000.
 
 
 Scénario Utilisateur
+
 Étape 1 : Création d'un compte
     Client 1 :
         Ouvrez http://localhost:3000.
