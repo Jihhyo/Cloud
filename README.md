@@ -11,8 +11,10 @@ L'application est composée des services suivants :
     Register Service : Gestion des enregistrements des utilisateurs.
     Login Service : Authentification des utilisateurs.
     Base de données (MySQL) : Stockage des informations des utilisateurs et des messages.
+
+    
 Prérequis:
-    Docker et Docker Compose , node , react , javascript 
+    Docker et Docker Compose
 
 Installation et Lancement
 Clonez ce dépôt :
